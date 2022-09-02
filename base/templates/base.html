@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <title>{% block page_title %}Cabin Coffee | Home{% endblock %}</title>
+
+
+    {% block start_styles %}{% endblock %}
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/stylesheet.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav-bar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    {% block extra_header %}{% endblock %}
+</head>
+
+<body style="overflow-x: hidden;">
+    {% include 'navbar.html' %}
+    <div class="base">
+        {% block body_content %}
+        {% endblock %}
+
+        <section id="copyright">
+            <div style="text-align: center;"><span class="copyright"><br>©2022 Cabin Coffee<br><br></span></div>
+        </section>
+    </div>
+    <script src="{% get_static_prefix %}bootstrap/js/bootstrap.bundle.js"></script>
+
+    {% block end_body %}{% endblock %}
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_content %}
+    <section>
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-4 offset-2 box">
+                    <div class="row p-0">
+                        <div class="col-12 box p-0">
+                            <img class="h-100 w-100" src="{% static 'img/shop.png' %}">
+                        </div>
+                    </div>
+                    <div  class="row p-0">
+                        <div class="col-12 box p-0">
+                            <img class="h-100 w-100" src="{% static 'img/shop.png' %}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 box text-center pt-4">
+                    <div class="location">
+                        {{ location.description }}
+                    </div>
+
+
+                    {% for story in news %}
+                    <div class="news">
+                    {{ story.description }}
+                    </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

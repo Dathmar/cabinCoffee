@@ -1,0 +1,56 @@
+{% load static %}
+{% load humanize %}
+    <section class="product-section body-padding">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-4 g-4">
+                {% for product in products %}
+                    <a class="custom-card" href="{{ product.get_absolute_url }}">
+                        <div class="card product-card h-100" style="width: 18rem;">
+                            <div class="text-center card-img-top" style="height: 10rem; width: auto; margin-top: 0.5rem;">
+                                <img style="margin: auto; height: 10rem; width: {% if image.image.image_width < image.image.image_height %}{% widthratio image.image.image_width image.image.image_height 10 %}{% else %}{% widthratio image.image.image_height image.image.image_width 10 %}{% endif %}rem;" src="{{ product.image.url }}" class="d-block"/>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-title">{{ product.title }}</p>
+                                <p style="margin-bottom: 1rem" class="card-text">
+                                    ${{ product.price|intword|intcomma }}
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <nav aria-label="Pagination Navigation">
+    {% if product_pages.has_other_pages %}
+        <ul class="pagination justify-content-center">
+            {% if product_pages.has_previous %}
+              <li class="page-item">
+                  <a class="page-link" href="?page={{ product_pages.previous_page_number }}">Previous</a>
+              </li>
+            {% else %}
+              <li class="page-item disabled">
+                  <span class="page-link">Previous</span>
+              </li>
+            {% endif %}
+
+            {% for i in product_pages.paginator.page_range %}
+                  {% if product_pages.number == i %}
+                        <li class="page-item active"><span class="page-link">{{ i }}</span></li>
+                  {% else %}
+                        <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                  {% endif %}
+            {% endfor %}
+
+            {% if product_pages.has_next %}
+                <li class="page-item"><a class="page-link" href="?page={{ product_pages.next_page_number }}">Next</a></li>
+            {% else %}
+                <li class="page-item disabled"><span class="page-link">Next</span></li>
+            {% endif %}
+        </ul>
+    {% endif %}
+    </nav>
+{% block end_body %}
+<script src="{% get_static_prefix %}js/lazy.js"></script>
+{% endblock %}

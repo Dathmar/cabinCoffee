@@ -1,0 +1,86 @@
+body {
+    font-family: "Open Sans";
+    background: #fef8da; /* fallback color */
+    background: linear-gradient(#fef8da, #382006);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.font-cream {
+    color: #fef8da;
+}
+
+.bg-cream {
+    color: #fef8da;
+}
+
+.font-brown {
+    color: #382006;
+}
+
+.bg-brown {
+    color: #382006;
+}
+
+.btn-primary {
+    border-color: #382006;
+    background-color: #382006;
+    color: #fef8da;
+    border-radius: 0;
+    border-width: 2px;
+}
+
+.btn-primary:hover {
+    border-color: #fef8da;
+    background-color: #fef8da;
+    color: #382006;
+    border-radius: 0;
+    border-width: 2px;
+}
+
+.btn-primary:hover {
+    border-color: #fef8da;
+    background-color: #fef8da;
+    color: #382006;
+    border-radius: 0;
+    border-width: 2px;
+}
+
+.copyright {
+    color: #fff;
+    font-weight: bold;
+}
+
+.box {
+    background: #ada07f;
+    border-color: #1a1e21;
+    border-width: 3px;
+    align-items: center;
+    border-style: solid;
+}
+
+.vert-center {
+    display: flex;
+    align-items: center; /* align vertical */
+    height: 100%;
+}
+
+.card-title {
+  font-size: 20px;
+}
+
+.product-card {
+  border: none !important;
+}
+
+.product-card:hover {
+  border: none !important;
+}
+
+a.custom-card,
+a.custom-card:hover {
+  color: inherit;
+  text-decoration: inherit;
+}

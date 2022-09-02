@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_content %}
+    <section class="p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 box p-0">
+                    <img src="{% static 'img/coffee.jpg' %}" class="w-100">
+                </div>
+                <div class="col-6 box">
+                    <div class="product-description">{{ product.description }}</div>
+                    <div class="product-size"><strong>Size:</strong> {{ product.size }}</div>
+                    <div class=""><strong>Price:</strong> {{ product.price }}</div>
+                    <button class="btn btn-primary rounded" id="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

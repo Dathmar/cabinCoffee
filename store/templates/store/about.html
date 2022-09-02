@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_content %}
+    <section>
+        <div class="container pt-4">
+            <h1 class="text-center">About Cabin-Coffee</h1>
+            <div class="row pt-3">
+                <div class="col-12 d-lg-none box p-0">
+                    <img src="{% static 'img/train.png' %}" alt="" class="w-100 h-100">
+                </div>
+                <div class="col-12 offset-0 col-lg-4 offset-lg-2 box">
+                    <div class="vert-center">
+                        When we think origins of these coffee shops, often our minds go to privileged dudes who were inspired by some stuff
+                        they saw in Italy or well-off corporate execs who were inspired by a moose they saw on some Alaskan ski trip.
+                        But when I think coffee, I think of that warm cup that kept us all going when times were hard and we were
+                        struggling.  I'm talking about the real dudes who were up at 5:30 in the morning to catch that first train out
+                        every morning just to make that paycheck - Cranking out those 12-hour days traveling across several towns just
+                        trying to make it in life.
+                    </div>
+                </div>
+                <div class="d-none col-lg-4 d-lg-block box p-0">
+                    <img src="{% static 'img/train.png' %}" alt="" class="w-100 h-100">
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-12 offset-0 col-lg-4 offset-lg-2 box p-0">
+                    <img src="{% static 'img/shop.png' %}" class="w-100 h-100">
+                </div>
+                <div class="col-12 col-lg-4 box">
+                    <div class="vert-center">
+                        Fortunately, when you're making that walk to the train station or bus stop having that first cigarette, some
+                        of those local cafés were open at the crack of dawn - and you had a chance to warm up with a cup of coffee and
+                        experience at least one good thing in life. It was a chance to briefly rest and enjoy some tranquility and
+                        remind yourself not to give up.  And to keep going. You don't know where life will take you next year or even
+                        tomorrow.
+                        <br>
+                        <br>
+                        But you keep going.  You don’t know where you’ll be tomorrow but that never stopped you before.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
