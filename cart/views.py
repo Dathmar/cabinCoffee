@@ -28,6 +28,31 @@ def add_to_cart(request):
     cart = Cart(request)
     product = Products.objects.get(id=body.get('product_id'))
     quantity = body.get('quantity')
+    override_quantity = body.get('override_quantity', False)
     if not product:
         return JsonResponse(status=404)
+    else:
+        cart.add(product, quantity, override_quantity)
+        return JsonResponse(data={}, status=200)
 
+
+@require_POST
+def remove_from_cart(request):
+    """
+    remove an item to the cart.  the body of the request will be a JSON object like
+    {
+        'product_id': 1,
+    }
+    :return: Return a http status
+    """
+
+    body = json.loads(request.body)
+
+    cart = Cart(request)
+    product = Products.objects.get(id=body.get('product_id'))
+
+    if not product:
+        return JsonResponse(status=404)
+    else:
+        cart.remove(product)
+        return JsonResponse(data={}, status=200)

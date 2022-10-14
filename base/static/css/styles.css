@@ -1,3 +1,13 @@
+html {
+    font-family: "Open Sans";
+    background: #fef8da; /* fallback color */
+    background: linear-gradient(#fef8da, #382006);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 body {
     font-family: "Open Sans";
     background: #fef8da; /* fallback color */
@@ -18,6 +28,10 @@ body {
 
 .font-brown {
     color: #382006;
+}
+
+a.font-brown:hover {
+    color: #fef8da;
 }
 
 .bg-brown {
@@ -68,19 +82,36 @@ body {
 }
 
 .card-title {
-  font-size: 20px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .product-card {
-  border: none !important;
+    border: 3px solid #000;
+    background: #382006;
+    color: #ada07f;
+}
+
+
+.card-img-product {
+    border: 3px solid #000;
 }
 
 .product-card:hover {
-  border: none !important;
+    border: 3px solid #000;
+    background: #ada07f;
+    color: #382006;
 }
 
 a.custom-card,
 a.custom-card:hover {
-  color: inherit;
-  text-decoration: inherit;
+    color: inherit;
+    text-decoration: inherit;
 }
+
+.navbar-light .navbar-toggler-icon {
+    color: #fef8da;
+    background-image: url("/static/img/hamburger.svg");
+    border: none;
+}
+

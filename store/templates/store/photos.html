@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_title %}Cabin-Coffee | Photos{% endblock %}
+{% block body_content %}
+<section>
+    <div class="container">
+        <div class="row">
+            {% for photo in photos %}
+            <div class="col-12 col-md-4 col-xl-3">
+                <img src="{{ photo.image.url }}" alt="{{ photo.description }}" style="max-height: 250px; max-width: 150px; height: auto; width: auto;"><br/>
+                <p>{{ photo.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

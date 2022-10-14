@@ -17,22 +17,19 @@
 .navigation-clean-button .navbar-brand {
   font-weight: bold;
   color: inherit;
+  align-items: start;
 }
 
 .navbar-brand:hover {
   color: #fef8da;
 }
 
-.navigation-clean-button .navbar-toggler {
-  border-color: #ddd;
-}
 
-.navigation-clean-button .navbar-toggler:hover, .navigation-clean-button .navbar-toggler:focus {
-  background: none;
-}
+
+
 
 .navigation-clean-button .navbar-toggler {
-  color: #fef8da;
+  border: none;
 }
 
 .navigation-clean-button .navbar-nav a.active, .navigation-clean-button .navbar-nav > .show > a {

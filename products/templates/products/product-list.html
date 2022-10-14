@@ -1,16 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block page_title %}Cabin-Coffee | Product List{% endblock %}
 {% block body_content %}
     <div class="container p-4">
-        <div class="row">
+        <div class="row justify-content-center">
             {% comment %}
             <div class="col-3">
                 {% include 'filters.html' %}
             </div>
             {% endcomment %}
-            <div class="col-12">
-                {% include 'products/product-list-cards.html' %}
-            </div>
+            {% include 'products/product-list-cards.html' %}
         </div>
     </div>
 {% endblock %}

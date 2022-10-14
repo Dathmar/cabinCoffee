@@ -1,35 +1,51 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block page_title %}Cabin-Coffee | Home{% endblock %}
 {% block body_content %}
+
     <section>
         <div class="container p-4">
-            <div class="row">
-                <div class="col-4 offset-2 box">
-                    <div class="row p-0">
-                        <div class="col-12 box p-0">
-                            <img class="h-100 w-100" src="{% static 'img/shop.png' %}">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-4 col-lg-5 m-2">
+                    <div  class="row p-0">
+                        <div class="col-12 box p-0 mb-md-3">
+                            <a href="{% url 'products:product-list' %}">
+                                <img class="h-100 w-100" src="{% static 'img/bag1.png' %}">
+                            </a>
                         </div>
                     </div>
-                    <div  class="row p-0">
-                        <div class="col-12 box p-0">
-                            <img class="h-100 w-100" src="{% static 'img/shop.png' %}">
+                    <div class="row p-0">
+                        <div class="d-none d-md-block col-12 box p-0">
+                            <a href="{% url 'store:about' %}">
+                                <img class="h-100 w-100" src="{% static 'img/coffee.jpg' %}">
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-4 box text-center pt-4">
+                <div class="col-12 col-md-7 col-lg-5 box pt-4 m-2">
                     <div class="location">
-                        {{ location.description }}
+                        {{ location.description|safe }}
                     </div>
-
-
                     {% for story in news %}
-                    <div class="news">
-                    {{ story.description }}
+                    <div class="news pt-3">
+                    {{ story.description|safe }}
                     </div>
-
                     {% endfor %}
+                    <div class="old-news pt-4">
+                        <a class="font-brown" href="{% url 'store:news' %}">Older Updates</a>
+                    </div>
+                </div>
+                <div class="col-12 d-block d-md-none box m-2">
+                    <div  class="row p-0">
+                        <div class="col-12 p-0">
+                            <a href="{% url 'store:about' %}">
+                                <img class="h-100 w-100" src="{% static 'img/coffee.jpg' %}">
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
     </section>
 {% endblock %}

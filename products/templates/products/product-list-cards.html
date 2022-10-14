@@ -7,10 +7,13 @@
                     <a class="custom-card" href="{{ product.get_absolute_url }}">
                         <div class="card product-card h-100" style="width: 18rem;">
                             <div class="text-center card-img-top" style="height: 10rem; width: auto; margin-top: 0.5rem;">
-                                <img style="margin: auto; height: 10rem; width: {% if image.image.image_width < image.image.image_height %}{% widthratio image.image.image_width image.image.image_height 10 %}{% else %}{% widthratio image.image.image_height image.image.image_width 10 %}{% endif %}rem;" src="{{ product.image.url }}" class="d-block"/>
+                                <img class="card-img-product" style="margin: auto; height: 10rem; width: {% if image.image.image_width < image.image.image_height %}{% widthratio image.image.image_width image.image.image_height 10 %}{% else %}{% widthratio image.image.image_height image.image.image_width 10 %}{% endif %}rem;" src="{{ product.image.url }}" class="d-block"/>
                             </div>
                             <div class="card-body">
                                 <p class="card-title">{{ product.title }}</p>
+                                <p style="height: 3em" class="card-text">
+                                    {{ product.short_description }}
+                                </p>
                                 <p style="margin-bottom: 1rem" class="card-text">
                                     ${{ product.price|intword|intcomma }}
                                 </p>

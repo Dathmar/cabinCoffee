@@ -1,41 +1,53 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block page_title %}Cabin-Coffee | About{% endblock %}
 {% block body_content %}
     <section>
         <div class="container pt-4">
             <h1 class="text-center">About Cabin-Coffee</h1>
-            <div class="row pt-3">
-                <div class="col-12 d-lg-none box p-0">
-                    <img src="{% static 'img/train.png' %}" alt="" class="w-100 h-100">
+            <div class="row pt-3 justify-content-center">
+                <div class="col-12 d-block d-lg-none box m-2" style="height: 538px; background-image: url('{% get_static_prefix %}img/coffee.jpg'); background-size: cover; background-position: center;">
                 </div>
-                <div class="col-12 offset-0 col-lg-4 offset-lg-2 box">
+                <div class="col-12 offset-0 col-lg-6 box p-3 m-2">
                     <div class="vert-center">
-                        When we think origins of these coffee shops, often our minds go to privileged dudes who were inspired by some stuff
-                        they saw in Italy or well-off corporate execs who were inspired by a moose they saw on some Alaskan ski trip.
-                        But when I think coffee, I think of that warm cup that kept us all going when times were hard and we were
-                        struggling.  I'm talking about the real dudes who were up at 5:30 in the morning to catch that first train out
-                        every morning just to make that paycheck - Cranking out those 12-hour days traveling across several towns just
-                        trying to make it in life.
+                        <span>
+                            I’d like to thank you for visiting our web page.  I built this little coffee shop for many
+                            reasons.  First, my favorite chain had left the state of Illinois.  I spent many days in
+                            their shops both visiting and working.  Many years after, I wanted to see another
+                            cabin-themed coffee shop come to the Chicagoland area.
+                            <br><br>
+                            During my time there, I would bring home the espresso blend to my mother.  She would grind
+                            it and brew it fresh for us every morning.  That was our way of bonding as a family. Today,
+                            it is that memorable taste I sought to share through my own coffee shop.  The Cabin-Coffee
+                            blend is a medium-dark roast made for espresso or cold brew.  It also makes a smooth drip
+                            coffee sporting a very balanced flavor with prominent notes of chocolate.  It is neither
+                            citrusy nor chalky which are the flavors I have always avoided.  The beans are roasted by
+                            our good friend over in Roselle, a town I loved growing up.</span>
                     </div>
                 </div>
-                <div class="d-none col-lg-4 d-lg-block box p-0">
-                    <img src="{% static 'img/train.png' %}" alt="" class="w-100 h-100">
+                <div class="col-4 d-none d-lg-block box m-2" style="background-image: url('{% get_static_prefix %}img/coffee.jpg'); background-size: cover; background-position: center;">
                 </div>
             </div>
-            <div class="row pt-3">
-                <div class="col-12 offset-0 col-lg-4 offset-lg-2 box p-0">
-                    <img src="{% static 'img/shop.png' %}" class="w-100 h-100">
+            <div class="row justify-content-center">
+                <div class="col-12 offset-0 col-lg-4 box p-0 m-2" style="min-height: 538px; background-image: url('{% get_static_prefix %}img/coffee.jpg'); background-size: cover; background-position: center;">
                 </div>
-                <div class="col-12 col-lg-4 box">
+                <div class="col-12 col-lg-6 box p-3 m-2">
                     <div class="vert-center">
-                        Fortunately, when you're making that walk to the train station or bus stop having that first cigarette, some
-                        of those local cafés were open at the crack of dawn - and you had a chance to warm up with a cup of coffee and
-                        experience at least one good thing in life. It was a chance to briefly rest and enjoy some tranquility and
-                        remind yourself not to give up.  And to keep going. You don't know where life will take you next year or even
-                        tomorrow.
-                        <br>
-                        <br>
-                        But you keep going.  You don’t know where you’ll be tomorrow but that never stopped you before.
+                        <span>
+                            Our Cold Brew is steeped for 24 hours and served with your choice of flavored syrups and a
+                            variety of dairy or non-dairy options.  And if you’re like me and trying to stay lean, I
+                            can give you a shot of cold espresso in lieu of the sugary syrups.  I want people to walk
+                            away impressed knowing they got the cold coffee they wanted.  You can find my locations on
+                            the main page of this site where I’ll be listing upcoming events.
+                            <br><br>
+                            On a final note, I’d like to mention that ten percent of my earnings will be used to help
+                            restore and maintain the historical Zion Church in Carpentersville. I have been blessed in
+                            more ways than I can imagine, so I’d like to use this enterprise as a means of paying it
+                            forward.
+                            <br><br>
+                            Thanks for your visit!<br>
+                            <a class="font-brown text-decoration-none" href="mailto:Rich@cabin-coffee.com">Rich@cabin-coffee.com</a>
+                        </span>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_title %}Cabin-Coffee | Photos{% endblock %}
+{% block body_content %}
+<section>
+    <div class="container">
+        {% for brew in brews %}
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3 box bg-cream mt-4 p-3">
+            {{ brew.description|safe }}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}
